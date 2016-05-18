@@ -6,11 +6,11 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: Color Hunter
+title: ATX DEV
 email: tw15egan@gmail.com
 description: > # A collection of CSS tricks I've picked up along the way, as well as a sprinkle of music I've been enjoying lately.
-baseurl: "/atx-dev" # the subpath of your site, e.g. /blog
-url: "http://tw15egan.github.io/" # the base hostname & protocol for your site
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site
 twitter_username: tj_egan 
 github_username:  tw15egan
 
