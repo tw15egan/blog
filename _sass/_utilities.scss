@@ -43,6 +43,14 @@ $monokai: (
   orange: $orange
 );
 
+$backgrounds: (
+  '1': $blue,
+  '2': $purple,
+  '3': $red,
+  '4': $green,
+  '5': $orange
+);
+
 $ui-colors: (
   css : #52bab3,
   music : #5ece7f,
@@ -76,6 +84,16 @@ $ui-colors: (
         color: $color;
       }
     }
+  }
+}
+
+@function post-background($color) {
+  @return map-get($backgrounds, $color);
+}
+
+@for $i from 1 through 5 {
+  .post:nth-child( #{$i} )  > .post__image {
+    background-color: post-background( #{$i} );
   }
 }
 

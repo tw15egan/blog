@@ -1,3 +1,18 @@
+.post:nth-child(1) > .post__image {
+  background-color: #66d9ef; }
+
+.post:nth-child(2) > .post__image {
+  background-color: #ae81ff; }
+
+.post:nth-child(3) > .post__image {
+  background-color: #f92a72; }
+
+.post:nth-child(4) > .post__image {
+  background-color: #a6e22e; }
+
+.post:nth-child(5) > .post__image {
+  background-color: #fd971f; }
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -173,7 +188,6 @@ a, a:visited {
   .post__image {
     width: 100%;
     padding: 1rem;
-    background-color: #fd971f;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -182,6 +196,16 @@ a, a:visited {
     -webkit-justify-content: center;
         -ms-flex-pack: center;
             justify-content: center; }
+    .post__image:nth-child(1) {
+      background-color: #66d9ef; }
+    .post__image:nth-child(2) {
+      background-color: #ae81ff; }
+    .post__image:nth-child(3) {
+      background-color: #f92a72; }
+    .post__image:nth-child(4) {
+      background-color: #a6e22e; }
+    .post__image:nth-child(5) {
+      background-color: #fd971f; }
     .post__image img {
       width: 100%;
       max-width: 600px;

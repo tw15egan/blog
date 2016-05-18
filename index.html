@@ -3,7 +3,7 @@ layout: default
 ---
 
   <ul class="main-content">
-    {% for post in site.posts | limit: 1 %}
+    {% for post in site.posts %}
       {% capture category %}
         {{ post.categories[0] | strip }}
       {% endcapture %}

@@ -8,15 +8,24 @@
   &__image {
     width: 100%;
     padding: $container-padding;
-    background-color: $orange;
     display: flex;
     justify-content: center;
+    
+    @for $i from 1 through 5 {
+      &:nth-child( #{$i} ) {
+        background-color: post-background( #{$i} );
+      }
+    }
     
     img {
       width: 100%;
       max-width: 600px;
       max-height: 400px;
     }
+    
+    
+    
+    
   }
 
   &__meta {
