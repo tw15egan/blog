@@ -1,0 +1,97 @@
+.post {
+  @include flex(flex-start, flex-start);
+  flex-direction: column;
+  min-height: 400px;
+  background-color: $white;
+  margin-bottom: $margin;
+
+  &__image {
+    width: 100%;
+    padding: $container-padding;
+    background-color: $orange;
+    display: flex;
+    justify-content: center;
+    
+    img {
+      width: 100%;
+      max-width: 600px;
+      max-height: 400px;
+    }
+  }
+
+  &__meta {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex: 1;
+    padding: $container-padding;
+
+    &--left {
+      flex: 11;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    &--right {
+      flex: 1;
+      height: auto;
+      background-color: $black-light;
+      color: $white;
+      padding: $padding-small $padding;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      max-width: 100px;
+    }
+  }
+
+  &__title {
+    width: 100%;
+    font-size: 2rem;
+    font-family: $base-font-family;
+  }
+
+  &__date {
+    
+    &--day {
+      font-size: 2rem;
+      font-weight: 300;
+      margin-bottom: $margin-small / 3;
+    }
+
+    &--month {
+      text-transform: uppercase;
+      color: $gray-dark;
+      font-size: .75rem;
+      letter-spacing: 1px;
+    }
+  }
+
+  &__content {
+    padding: $container-padding;
+    font-family: $base-font-family;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.6rem;
+    font-size: $base-font-size;
+  }
+
+  &__button {
+    width: auto;
+    align-self: flex-end;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: .8rem;
+    min-width: 100px;
+    max-width: 150px;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-top: $margin * 2;
+    padding: $padding-small $padding;
+    background-color: $black-light;
+    color: $white;
+  }
+}

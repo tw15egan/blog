@@ -1,0 +1,99 @@
+$base-font-size: 18px;
+$base-font-family: 'ff-tisa-sans-web-pro', sans-serif;
+$font-family-primary: 'proxima-nova', sans-serif;
+$font-family-header: 'fatfrank', sans-serif;
+
+$container-margin: 1rem;
+$container-padding: 1rem;
+
+$margin-large: 2em;
+$margin: 1em;
+$margin-small: .5em;
+
+$padding-large: 2em;
+$padding: 1em;
+$padding-small: .5em;
+
+$black: #222;
+$black-light: #323232;
+$white: #fefefe;
+$gray-light: darken($white, 10%);
+$gray: darken($white, 20%);
+$gray-dark: darken($white, 30%);
+
+$blue: #66d9ef;
+$purple: #ae81ff;
+$red: #f92a72;
+$green: #a6e22e;
+$orange: #fd971f;
+
+$social-colors: (
+  twitter: #55acee,
+  github: #333333,
+  facebook: #3b5998,
+  linkedin: #0077b5,
+  spotify: #2ebd59
+);
+
+$monokai: (
+  blue: $blue,
+  purple: $purple,
+  red: $red,
+  green: $green,
+  orange: $orange
+);
+
+$ui-colors: (
+  css : #52bab3,
+  music : #5ece7f,
+  html : #e67478,
+  animation : #ff784f
+);
+
+@mixin social-colors-hover($map) {
+  @each $theme, $color in $map {
+    &--#{$theme} {
+      &:hover {
+        svg {
+          background-color: $color;
+          transform: scale(1.1);
+        }
+
+        path {
+          fill: $white;
+        }
+      }
+    }
+  }
+}
+
+@mixin tag-colors($map) {
+  @each $theme, $color in $map {
+    &--#{$theme} {
+      border-bottom: 2px solid $color;
+      
+      &:hover {
+        color: $color;
+      }
+    }
+  }
+}
+
+
+@mixin breakpoint($point) {
+  @if $point == large {
+    @media (min-width: 64.375em) { @content; }
+  }
+  @else if $point == medium {
+    @media (min-width: 50em) { @content; }
+  }
+  @else if $point == small {
+    @media (min-width: 37.5em)  { @content; }
+  }
+}
+
+@mixin flex($justify: center, $align: center) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+}

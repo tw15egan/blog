@@ -1,0 +1,92 @@
+.toggle {
+  position: relative;
+  display: block;
+  min-height: 35px;
+  min-width: 35px;
+  
+  @media (min-width: 600px) {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+.toggle span,
+.toggle span:before,
+.toggle span:after {
+  display: block;
+  content: '';
+  position: absolute;
+  left: 0; 
+  right: 0;
+  margin: 0 auto;
+  top: 15px;
+  cursor: pointer;
+  border-radius: 1px;
+  height: 3px;
+  width: 25px;
+  background-color: $white;
+  transition: all .3s ease-in-out;
+}
+
+.toggle span:before {
+  top: -8px;
+}
+
+.toggle span:after {
+  top: 8px;
+}
+
+.toggle.active span {
+  background-color: transparent;
+}
+
+.toggle.active span:before,
+.toggle.active span:after {
+  top: 0;
+}
+
+.toggle.active span:before {
+  transform: rotate(45deg);
+}
+
+.toggle.active span:after {
+  transform: rotate(-225deg);
+}
+
+
+.toggle {
+  &__container {
+    height: 35px;
+    width: 35px;
+    position: relative;
+    z-index: 10;
+  }
+  
+  &__content {
+    position: absolute;
+    right: -$padding;
+    text-align: right;
+    background-color: $black;
+    color: $white;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-100px);
+    z-index: 1;
+    
+    li {
+      padding: $padding;
+      cursor: pointer;
+      min-width: 200px;
+      
+      &:hover {
+        background-color: lighten($black, 10%);
+      }
+    }
+  }
+}
+
+.toggle__content.active {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}

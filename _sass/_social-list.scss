@@ -1,0 +1,26 @@
+.social-list {
+  @include flex(flex-start, center);
+  height: auto;
+  min-height: 2em;
+
+  .social-list__icon {
+    @include social-colors-hover($social-colors);
+
+    border-radius: 50%;
+
+    &:not(:first-child) {
+      margin-left: $margin-small;
+    }
+
+    svg {
+      height: 25px;
+      width: 25px;
+      border-radius: 50%;
+      fill: $white;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+}
