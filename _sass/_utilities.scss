@@ -16,7 +16,7 @@ $padding-small: .5em;
 
 $black: #222;
 $black-light: #323232;
-$white: #fefefe;
+$white: #fff;
 $gray-light: darken($white, 10%);
 $gray: darken($white, 20%);
 $gray-dark: darken($white, 30%);
@@ -84,16 +84,6 @@ $ui-colors: (
         color: $color;
       }
     }
-  }
-}
-
-@function post-background($color) {
-  @return map-get($backgrounds, $color);
-}
-
-@for $i from 1 through 5 {
-  .post:nth-child( #{$i} )  > .post__image {
-    background-color: post-background( #{$i} );
   }
 }
 

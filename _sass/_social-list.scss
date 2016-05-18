@@ -11,6 +11,11 @@
     &:not(:first-child) {
       margin-left: $margin-small;
     }
+    
+    & > a {
+      display: flex;
+      align-items: center;
+    }
 
     svg {
       height: 25px;

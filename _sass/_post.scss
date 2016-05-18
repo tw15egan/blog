@@ -1,3 +1,13 @@
+@function post-background($color) {
+  @return map-get($backgrounds, $color);
+}
+
+@for $i from 1 through 5 {
+  .post:nth-child( #{$i} )  > .post__image {
+    background-color: rgba(post-background( #{$i} ), .8);
+  }
+}
+
 .post {
   @include flex(flex-start, flex-start);
   flex-direction: column;
@@ -10,22 +20,14 @@
     padding: $container-padding;
     display: flex;
     justify-content: center;
-    
-    @for $i from 1 through 5 {
-      &:nth-child( #{$i} ) {
-        background-color: post-background( #{$i} );
-      }
-    }
-    
+    align-items: flex-end;
+    height: auto;
+
     img {
       width: 100%;
       max-width: 600px;
       max-height: 400px;
     }
-    
-    
-    
-    
   }
 
   &__meta {
@@ -104,3 +106,4 @@
     color: $white;
   }
 }
+
