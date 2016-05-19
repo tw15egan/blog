@@ -11,7 +11,19 @@
         
     {% include footer.html %}
     </div>
-    <script src="js/scripts.js"></script>
+    <script type="text/javascript">
+      function downloadJSAtOnload() {
+        var element = document.createElement("script");
+        element.src = "js/scripts.js";
+        document.body.appendChild(element);
+        }
+        
+        if (window.addEventListener)
+          window.addEventListener("load", downloadJSAtOnload, false);
+        else if (window.attachEvent)
+          window.attachEvent("onload", downloadJSAtOnload);
+        else window.onload = downloadJSAtOnload;
+      </script>
   </body>
 
 </html>
