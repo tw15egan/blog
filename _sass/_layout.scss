@@ -54,6 +54,13 @@
 
 .main-content {
   min-height: 800px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  
+  @media (min-width: 800px) {
+    flex-direction: row;
+  }
 }
 
 .main-footer {
