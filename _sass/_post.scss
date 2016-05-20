@@ -17,7 +17,7 @@
 
   &__image {
     width: 100%;
-    padding: $container-padding;
+    padding: $container-padding * 2;
     display: flex;
     justify-content: center;
     align-items: flex-start;
