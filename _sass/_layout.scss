@@ -14,8 +14,12 @@
   height: auto;
   width: 100%;
   background-color: $black;
+  
+  a {
+    width: 100%;
+  }
 
-  a.main-header__title {
+  &__title {
     width: 100%;
     min-height: 5rem;
     display: flex;
@@ -24,10 +28,11 @@
     font-family: $font-family-header;
     font-size: 2rem;
     padding: $container-padding;
+    color: $white;
     
     @media (min-width: 1000px) {
       background-color: $white;
-      color: $black !important;
+      color: $black;
     }
   }
 }

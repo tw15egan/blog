@@ -3,6 +3,9 @@ $base-font-family: 'ff-tisa-sans-web-pro', sans-serif;
 $font-family-primary: 'proxima-nova', sans-serif;
 $font-family-header: 'fatfrank', sans-serif;
 
+$base-line-height: 1.58;
+$mobile-line-height: 1.5;
+
 $container-margin: 1rem;
 $container-padding: 1rem;
 
@@ -16,6 +19,7 @@ $padding-small: .5em;
 
 $black: #222;
 $black-light: #323232;
+
 $white: #fff;
 $gray-light: darken($white, 10%);
 $gray: darken($white, 20%);

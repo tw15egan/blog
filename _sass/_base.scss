@@ -60,9 +60,17 @@ html, body {
 
 a, a:visited {
   text-decoration: none;
-  color: $white;
+  color: $black;
 
   &:hover, &:focus {
     color: darken($white, 10%);
   }
+}
+
+p {
+	line-height: $base-line-height;
+	
+	@media (max-width: 600px) {
+		line-height: $mobile-line-height;
+	}
 }

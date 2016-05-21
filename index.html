@@ -37,7 +37,7 @@ layout: default
           </div>
           <div class="post__content">
             <p>{{post.excerpt | truncatewords: 40 }}</p>
-            <a href="{{ post.url | prepend: site.baseurl }}" class="post__button">Read More</a>
+            <a href="{{ post.url | prepend: site.baseurl }}"><button class="post__button">Read More</button></a>
           </div>
         </li>
       {% endif %}

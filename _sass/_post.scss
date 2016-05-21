@@ -50,8 +50,8 @@
     &--right {
       flex: 1;
       height: auto;
-      background-color: $black-light;
-      color: $white;
+      color: $black-light;
+      border: 2px solid $black-light;
       padding: $padding-small $padding;
       display: flex;
       flex-direction: column;
@@ -64,13 +64,16 @@
   &__title {
     width: 100%;
     font-size: 2rem;
-    font-family: $base-font-family;
+    min-height: 1.5;
+    margin: $margin-small 0;
+    font-family: $font-family-primary;
+    padding-right: $padding-small;
   }
 
   &__date {
     
     &--day {
-      font-size: 2rem;
+      font-size: 1.5rem;
       font-weight: 300;
       margin-bottom: $margin-small / 3;
     }
@@ -85,7 +88,7 @@
 
   &__content {
     padding: $container-padding;
-    font-family: $base-font-family;
+    font-family: $font-family-primary;
     display: flex;
     flex-direction: column;
     line-height: 1.6rem;
@@ -105,8 +108,13 @@
     cursor: pointer;
     margin-top: $margin * 2;
     padding: $padding-small $padding;
-    background-color: $black-light;
-    color: $white;
+    color: $black-light;
+    border: 2px solid $black-light;
+    
+    &:hover {
+      background-color: $black-light;
+      color: $white;
+    }
   }
 }
 
