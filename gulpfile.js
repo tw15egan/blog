@@ -70,7 +70,7 @@ gulp.task('sass', function () {
         .pipe(maps.write('./'))
         .pipe(gulp.dest('_site/css'))
         .pipe(gulp.dest('css'))
-        .pipe(browserSync.reload({stream:true}));
+        .pipe(browserSync.stream());
 });
 
 /**
@@ -82,7 +82,7 @@ gulp.task('js', function () {
         .pipe(rename('app.min.js'))
         .pipe(gulp.dest('_site/js'))
         .pipe(gulp.dest('js'))
-        .pipe(browserSync.reload({stream:true}));
+        .pipe(browserSync.stream());
 });
 
 /**
@@ -92,7 +92,7 @@ gulp.task('js', function () {
 gulp.task('watch', function () {
     gulp.watch('_sass/**/*.scss', ['sass']);
     gulp.watch('css/*.scss', ['sass']);
-    gulp.watch('js/*.js', ['js']);
+    gulp.watch('js/*.js', ['js'], ['jekyll-rebuild']);
     gulp.watch(['*.html', '_layouts/*.html', '_includes/*.html', '_posts/*'], ['jekyll-rebuild']);
 });
 

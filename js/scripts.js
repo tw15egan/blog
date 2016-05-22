@@ -11,18 +11,21 @@ navIcon.addEventListener('click', function(e) {
 var mainHeader = document.querySelector('#main-header');
 var socialList = document.querySelector('#social-list');
 var stickyNav = document.querySelector('#nav-toggle > span');
+var stickyNav = document.querySelector('#nav-toggle');
 
-console.log(stickyNav);
 
 window.addEventListener('scroll', function(e) {
-  console.log(window.scrollY);
-  if (window.scrollY > 80) {
-    mainHeader.classList.add('main-header--active');
-    socialList.classList.add('social-list--active');
-    stickyNav.classList.add('sticky-nav');
-  } else {
-    mainHeader.classList.remove('main-header--active');
-    socialList.classList.remove('social-list--active');
-    stickyNav.classList.remove('sticky-nav');
+  if (window.innerWidth < 800) {
+    if (window.scrollY > 80) {
+      navList.classList.add('.toggle__content--active');
+      mainHeader.classList.add('main-header--active');
+      socialList.classList.add('social-list--active');
+      stickyNav.classList.add('sticky-nav');
+    } else {
+      navList.classList.remove('.toggle__content--active');
+      mainHeader.classList.remove('main-header--active');
+      socialList.classList.remove('social-list--active');
+      stickyNav.classList.remove('sticky-nav');
+    }
   }
 })

@@ -24,18 +24,15 @@
       fill: $white;
 
       &:hover {
-        transform: scale(1.4);
+        // animation: rock 1s infinite linear;
+        transform: scale(1.2);
       }
     }
   }
 }
-// 
-// .github__icon {
-//   &--circle {
-//     
-//   }
-//   
-//   &--image {
-//     fill: $black;
-//   }
-// }
+
+@keyframes rock {
+  0%,100% { transform: rotate(0);}
+  25% { transform: rotate(-20deg);}
+  75% { transform: rotate(20deg);}
+}

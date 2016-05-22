@@ -3,8 +3,10 @@
   display: block;
   min-height: 35px;
   min-width: 35px;
+  top: 0;
+  cursor: pointer;
   
-  @media (min-width: 600px) {
+  @media (min-width: 800px) {
     visibility: hidden;
     opacity: 0;
   }
@@ -86,7 +88,5 @@
 }
 
 .toggle__content.active {
-  visibility: visible;
-  opacity: 1;
-  transform: translateY(0);
+
 }
