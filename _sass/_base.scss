@@ -48,24 +48,26 @@ table {
 }
 
 * {
-	box-sizing: border-box;
-	transition: .3s;
+  box-sizing: border-box;
+  transition: .3s;
+}
+
+a {
+	text-decoration: none;
+	color: $red;
+	
+	&:hover {
+		$color: $black;
+	}
 }
 
 html, body {
   height: 100%;
   width: 100%;
   font-family: $font-family-primary;
+	font-smoothing: subpixel-antialiased;
 }
 
-a, a:visited {
-  text-decoration: none;
-  color: $black;
-
-  &:hover, &:focus {
-    color: darken($white, 10%);
-  }
-}
 
 p {
 	line-height: $base-line-height;

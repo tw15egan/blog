@@ -37,7 +37,11 @@ layout: default
           </div>
           <div class="post__content">
             <p>{{post.excerpt | truncatewords: 40 }}</p>
-            <a href="{{ post.url | prepend: site.baseurl }}"><button class="post__button">Read More</button></a>
+            <a class="button__wrapper" href="{{ post.url | prepend: site.baseurl }}">
+              <p class="button__text">READ MORE</p>
+              <!-- <button class="post__button">Read More</button> -->
+              {% include right-arrow.svg %}
+            </a>
           </div>
         </li>
       {% endif %}
