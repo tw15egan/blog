@@ -47,7 +47,7 @@ gulp.task('images', function() {
 /**
  * Wait for jekyll-build, then launch the Server
  */
-gulp.task('browser-sync', ['sass', 'jekyll-build'], function() {
+gulp.task('browser-sync', ['sass', 'js', 'jekyll-build'], function() {
     browserSync({
         server: {
             baseDir: '_site'
@@ -81,8 +81,8 @@ gulp.task('js', function () {
         .pipe(uglify())
         .pipe(rename('app.min.js'))
         .pipe(gulp.dest('_site/js'))
-        .pipe(browserSync.reload({stream:true}))
-        .pipe(gulp.dest('js'));
+        .pipe(gulp.dest('js'))
+        .pipe(browserSync.reload({stream:true}));
 });
 
 /**

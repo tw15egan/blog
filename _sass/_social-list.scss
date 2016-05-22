@@ -18,13 +18,13 @@
     }
 
     svg {
-      height: 22px;
-      width: 22px;
+      height: 25px;
+      width: 25px;
       border-radius: 50%;
       fill: $white;
 
       &:hover {
-        transform: scale(1.2);
+        transform: scale(1.4);
       }
     }
   }

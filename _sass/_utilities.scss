@@ -68,7 +68,6 @@ $ui-colors: (
     &--#{$theme} {
       svg {
         background-color: $color;
-        transform: scale(1.1);
         fill: $black;
       }
 
@@ -80,25 +79,13 @@ $ui-colors: (
         path {
           fill: $black;
         }
-        
+
         svg {
           background-color: $white;
         }
-        
+
         .github__icon--circle {
           fill: $white;
-        }
-      }
-      
-      &:hover {
-        svg {
-          background-color: $black;
-        }
-        
-        @if ($theme == 'github') {
-          path {
-            fill: $white;    
-          }  
         }
       }
     }

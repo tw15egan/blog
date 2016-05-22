@@ -1,0 +1,14 @@
+.main-header--active {
+  z-index: 10;
+  height: 80px;
+}
+
+.social-list--active {
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(-100px);
+}
+
+.sticky-nav {
+  top: -42px !important;
+}

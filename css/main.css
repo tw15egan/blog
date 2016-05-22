@@ -94,9 +94,14 @@ p {
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: auto;
+  height: 147px;
   width: 100%;
-  background-color: #222; }
+  background-color: #222;
+  position: fixed;
+  top: 0; }
+  @media (min-width: 600px) {
+    .main-header {
+      position: relative; } }
   .main-header a {
     width: 100%; }
   .main-header__title {
@@ -163,7 +168,8 @@ p {
           flex-direction: column;
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
-          flex-wrap: wrap; }
+          flex-wrap: wrap;
+  margin-top: 147px; }
   @media (min-width: 800px) {
     .main-content {
       -webkit-box-orient: horizontal;
@@ -171,6 +177,9 @@ p {
       -webkit-flex-direction: row;
           -ms-flex-direction: row;
               flex-direction: row; } }
+  @media (min-width: 600px) {
+    .main-content {
+      margin-top: 0; } }
 
 .main-footer {
   min-height: 100px;
@@ -440,19 +449,11 @@ p {
             border-radius: 50%; }
     .social-list .social-list__icon--twitter svg {
       background-color: #55acee;
-      -webkit-transform: scale(1.1);
-          -ms-transform: scale(1.1);
-              transform: scale(1.1);
       fill: #222; }
     .social-list .social-list__icon--twitter .icon__circle {
       fill: #55acee; }
-    .social-list .social-list__icon--twitter:hover svg {
-      background-color: #222; }
     .social-list .social-list__icon--github svg {
       background-color: #333333;
-      -webkit-transform: scale(1.1);
-          -ms-transform: scale(1.1);
-              transform: scale(1.1);
       fill: #222; }
     .social-list .social-list__icon--github .icon__circle {
       fill: #333333; }
@@ -462,40 +463,21 @@ p {
       background-color: #fff; }
     .social-list .social-list__icon--github .github__icon--circle {
       fill: #fff; }
-    .social-list .social-list__icon--github:hover svg {
-      background-color: #222; }
-    .social-list .social-list__icon--github:hover path {
-      fill: #fff; }
     .social-list .social-list__icon--facebook svg {
       background-color: #3b5998;
-      -webkit-transform: scale(1.1);
-          -ms-transform: scale(1.1);
-              transform: scale(1.1);
       fill: #222; }
     .social-list .social-list__icon--facebook .icon__circle {
       fill: #3b5998; }
-    .social-list .social-list__icon--facebook:hover svg {
-      background-color: #222; }
     .social-list .social-list__icon--linkedin svg {
       background-color: #0077b5;
-      -webkit-transform: scale(1.1);
-          -ms-transform: scale(1.1);
-              transform: scale(1.1);
       fill: #222; }
     .social-list .social-list__icon--linkedin .icon__circle {
       fill: #0077b5; }
-    .social-list .social-list__icon--linkedin:hover svg {
-      background-color: #222; }
     .social-list .social-list__icon--spotify svg {
       background-color: #2ebd59;
-      -webkit-transform: scale(1.1);
-          -ms-transform: scale(1.1);
-              transform: scale(1.1);
       fill: #222; }
     .social-list .social-list__icon--spotify .icon__circle {
       fill: #2ebd59; }
-    .social-list .social-list__icon--spotify:hover svg {
-      background-color: #222; }
     .social-list .social-list__icon:not(:first-child) {
       margin-left: 0.5em; }
     .social-list .social-list__icon > a {
@@ -508,15 +490,15 @@ p {
           -ms-flex-align: center;
               align-items: center; }
     .social-list .social-list__icon svg {
-      height: 22px;
-      width: 22px;
+      height: 25px;
+      width: 25px;
       -webkit-border-radius: 50%;
               border-radius: 50%;
       fill: #fff; }
       .social-list .social-list__icon svg:hover {
-        -webkit-transform: scale(1.2);
-            -ms-transform: scale(1.2);
-                transform: scale(1.2); }
+        -webkit-transform: scale(1.4);
+            -ms-transform: scale(1.4);
+                transform: scale(1.4); }
 
 .toggle {
   position: relative;
@@ -644,5 +626,19 @@ p {
       -ms-flex-direction: column-reverse;
           flex-direction: column-reverse;
   padding: 1rem 0; }
+
+.main-header--active {
+  z-index: 10;
+  height: 80px; }
+
+.social-list--active {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: translate(-100px);
+      -ms-transform: translate(-100px);
+          transform: translate(-100px); }
+
+.sticky-nav {
+  top: -42px !important; }
 
 /*# sourceMappingURL=main.css.map */
