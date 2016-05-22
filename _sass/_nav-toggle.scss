@@ -72,7 +72,6 @@
     visibility: hidden;
     opacity: 0;
     top: -50px;
-    transform: scale(1) translateY(-10px);
     transform-origin: top center;
     right: -$padding;
     display: flex;
@@ -101,14 +100,15 @@
 
 .toggle__content.active {
   opacity: 1;
-  transform: scale(1);
   visibility: visible;
 }
 
 .toggle__content--scroll {
-  top: 0;
+  // top: 0;
+  transform: translateY(50px) ;
 }
 
 .toggle__content--mobile {
-  top: 50px;
+  // top: 50px;
+  transform: translateY(101px) ;
 }
