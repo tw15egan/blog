@@ -12,6 +12,7 @@
   @include flex(space-between, flex-start);
   flex-direction: column;
   height: auto;
+  min-height: 147px;
   width: 100%;
   background-color: $black;
   position: fixed;

@@ -26,6 +26,7 @@ var mainHeader = document.querySelector('#main-header');
 var socialList = document.querySelector('#social-list');
 var stickyNav = document.querySelector('#nav-toggle > span');
 var stickyNav = document.querySelector('#nav-toggle');
+var headerTitle = document.querySelector('#site-title');
 
 
 window.addEventListener('scroll', function(e) {
@@ -35,10 +36,12 @@ window.addEventListener('scroll', function(e) {
       mainHeader.classList.add('main-header--active');
       socialList.classList.add('social-list--active');
       stickyNav.classList.add('sticky-nav');
+      headerTitle.classList.add('main-header__title--scroll')
     } else {
       navList.classList.remove('.toggle__content--active');
       navIcon.classList.remove('active');
       navList.classList.remove('active');
+      headerTitle.classList.remove('main-header__title--scroll')
       navList.classList.remove('toggle__content--scroll');
       navList.classList.remove('toggle__content--mobile');
       mainHeader.classList.remove('main-header--active');
