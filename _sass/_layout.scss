@@ -11,7 +11,7 @@
 .main-header {
   @include flex(space-between, flex-start);
   flex-direction: column;
-  height: 147px;
+  height: auto;
   width: 100%;
   background-color: $black;
   position: fixed;

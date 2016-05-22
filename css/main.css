@@ -94,7 +94,7 @@ p {
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 147px;
+  height: auto;
   width: 100%;
   background-color: #222;
   position: fixed;
