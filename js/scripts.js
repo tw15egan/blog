@@ -48,5 +48,9 @@ window.addEventListener('scroll', function(e) {
       socialList.classList.remove('social-list--active');
       stickyNav.classList.remove('sticky-nav');
     }
+  } else {
+    mainHeader.classList.remove('main-header--active');
+    headerTitle.classList.remove('main-header__title--scroll');
+    socialList.classList.remove('social-list--active');
   }
 })
