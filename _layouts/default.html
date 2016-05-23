@@ -13,6 +13,10 @@
     </div>
   <script type="text/javascript">
     function downloadJSAtOnload() {
+      var l = document.createElement('link'); l.rel = 'stylesheet';
+      l.href = 'css/main.css';
+      var h = document.getElementsByTagName('head')[0]; h.parentNode.insertBefore(l, h);
+
       var element = document.createElement("script");
       element.src = "{{site.baseurl}}/js/app.min.js";
       document.body.appendChild(element);
@@ -24,15 +28,6 @@
         window.attachEvent("onload", downloadJSAtOnload);
       else window.onload = downloadJSAtOnload;
 
-      var cb = function() {
-        var l = document.createElement('link'); l.rel = 'stylesheet';
-        l.href = 'css/main.css';
-        var h = document.getElementsByTagName('head')[0]; h.parentNode.insertBefore(l, h);
-      };
-      var raf = requestAnimationFrame || mozRequestAnimationFrame ||
-          webkitRequestAnimationFrame || msRequestAnimationFrame;
-      if (raf) raf(cb);
-      else window.addEventListener('load', cb);
     </script>
   </body>
 
