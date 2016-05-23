@@ -1,82 +1,32 @@
-/**
- * Site header
- */
-.container {
-  height: auto;
-  width: 100%;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-.main-header {
-  @include flex(space-between, flex-start);
-  flex-direction: column;
-  height: auto;
-  min-height: 147px;
-  width: 100%;
-  background-color: $black;
-  position: fixed;
-  top: 0;
-  z-index: 100;
-  transform: translateZ(0);
-  
+.main-header {  
   @media (min-width: 800px) {
     position: relative;
   }
 
 
-  &__title {
-    min-height: 5rem;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    font-family: $font-family-header;
-    font-size: 2rem;
-    padding: $container-padding;
-    color: $white;
-    
+  &__title {    
     @media (min-width: 1000px) {
       background-color: $white;
       color: $black;
-      width: 100%;
     }
   }
 }
 
 .main-header__nav-bar {
-  z-index: 1000;
-  position: relative;
-  width: 100%;
-  min-height: 35px;
-  display: flex;
-  justify-content: space-between;
-  padding: $container-padding;
-  align-items: center;
-  
+
   @media (min-width: 800px) {
     justify-content: flex-end;
 
     .toggle__container {
       display: none;
     }
-    
   }
 }
 
 .main-content {
-  min-height: 800px;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  margin-top: 147px;
   
   @media (min-width: 800px) {
     flex-direction: row;
     margin-top: 0;
   }
-}
-
-.main-footer {
-  min-height: 100px;
-  background-color: $black;
 }

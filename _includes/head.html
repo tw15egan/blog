@@ -8,14 +8,77 @@
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
   
   <style>
+    .wf-loading .main-header,
+    .wf-loading .post__image, 
     .wf-loading .post__meta--left, 
     .wf-loading .post__meta--right,
     .wf-loading .post__content {
       opacity: 0;
     }
+    
+    .container {
+      height: auto;
+      width: 100%;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .main-header {
+      opacity: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-start;
+      height: auto;
+      background-color: #222;
+      min-height: 147px;
+      width: 100%;
+      position: fixed;
+      top: 0;
+      z-index: 100;
+      transform: translateZ(0);
+    }
+    
+    
+    .main-header__title {
+      min-height: 5rem;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      font-family: 'fatfrank', sans-serif;
+      font-size: 2rem;
+      padding: 1rem;
+      background-color: #222;
+      color: #fff;
+    }
+
+    .main-header__nav-bar {
+      z-index: 1000;
+      position: relative;
+      width: 100%;
+      min-height: 35px;
+      display: flex;
+      justify-content: space-between;
+      padding: 1rem;
+      align-items: center;
+    }
+
+    .main-content {
+      min-height: 800px;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      margin-top: 147px;
+    }
+
+    .main-footer {
+      min-height: 100px;
+      background-color: #222;
+    }
   </style>
 
-  <!-- <link rel="stylesheet" href="{{ "{{site.baseurl}}/css/main.css" | prepend: site.baseurl }}"> -->
+  <link rel="stylesheet" href="{{ "{{site.baseurl}}/css/main.css" | prepend: site.baseurl }}">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
 </head>
