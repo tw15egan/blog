@@ -1,8 +1,10 @@
 .tag__list {
   display: flex;
+  opacity: 1;
 
   .tag {
     @include tag-colors($ui-colors);
+
     font-family: $font-family-primary;
     font-weight: 200;
     display: block;
