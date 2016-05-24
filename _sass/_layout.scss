@@ -30,3 +30,32 @@
     margin-top: 0;
   }
 }
+
+.main-footer {
+  background-color: $black;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: $container-padding;
+  font-size: $base-font-size;
+  color: $white;
+
+  &__copy {
+    font-weight: 600;
+    font-size: 1.25rem;
+    color: $red;
+    font-family: $font-family-secondary;
+  }
+
+  &__name {
+    padding: 0 $padding-small / 2;
+    font-weight: 600;
+    font-family: $font-family-primary;
+  }
+  
+  &__year {
+    color: $gray-dark;
+    font-weight: 200;
+    font-family: $font-family-secondary;
+  }
+}
