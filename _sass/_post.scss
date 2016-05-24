@@ -7,6 +7,12 @@
 }
 
 @for $i from 1 through 5 {
+  .post {
+    &:nth-child(#{$i}) {
+      transition-delay: .1s * ( $i - 1 );
+    }
+  }
+  
   .post:nth-child( #{$i} )  > .post__image {
     background-color: rgba(post-background( #{$i} ), .8);
   }
@@ -36,6 +42,8 @@
   @include flex(flex-start, flex-start);
   flex-direction: column;
   width: 100%;
+  transform: scale(1);
+  opacity: 1;
   background-color: $white;
   margin-bottom: $margin;
 

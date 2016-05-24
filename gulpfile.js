@@ -66,7 +66,7 @@ gulp.task('sass', function () {
             includePaths: ['_sass']
         }))
         .pipe(prefix(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
-        .pipe(nano())
+        // .pipe(nano())
         .pipe(maps.write('./'))
         .pipe(gulp.dest('_site/css'))
         .pipe(gulp.dest('css'))

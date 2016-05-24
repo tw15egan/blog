@@ -8,6 +8,10 @@
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
   
   <style>
+    .wf-loading .post {
+      opacity: 0;
+      transform: scale(.5);
+    }
     .wf-loading .main-header,
     .wf-loading .post__image, 
     .wf-loading .post__meta--left, 
