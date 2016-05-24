@@ -113,11 +113,10 @@ p {
   color: #fff; }
   .main-footer__copy {
     font-weight: 600;
-    font-size: 1.25rem;
     color: #f92a72;
     font-family: "source-sans-pro", sans-serif; }
   .main-footer__name {
-    padding: 0 0.25em;
+    padding: 0 0.125em;
     font-weight: 600;
     font-family: "freight-sans-pro", sans-serif; }
   .main-footer__year {

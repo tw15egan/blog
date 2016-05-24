@@ -42,13 +42,12 @@
 
   &__copy {
     font-weight: 600;
-    font-size: 1.25rem;
     color: $red;
     font-family: $font-family-secondary;
   }
 
   &__name {
-    padding: 0 $padding-small / 2;
+    padding: 0 $padding-small / 4 ;
     font-weight: 600;
     font-family: $font-family-primary;
   }
